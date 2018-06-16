@@ -24,7 +24,7 @@ pretty quickly.
 Required:
 
 ```
-yarn add -D eslint babel-eslint prettier eslint-config-prettier
+yarn add -D eslint babel-eslint prettier eslint-config-prettier eslint-config-ai
 ```
 
 Optional (based on the configs you choose):
