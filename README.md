@@ -24,14 +24,16 @@ pretty quickly.
 Required:
 
 ```
-npm install -D eslint babel-eslint eslint-config-prettier
+yarn add -D eslint babel-eslint prettier eslint-config-prettier
 ```
 
 Optional (based on the configs you choose):
 
 ```
-npm install -D eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-compat eslint-plugin-react
+yarn add -D eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-compat eslint-plugin-react
 ```
+
+- If you use npm, replace `yarn add` with `npm install`
 
 ## Usage
 

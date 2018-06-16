@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ai",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "devDependencies": {
@@ -23,7 +23,8 @@
     "eslint-plugin-jest": ">=21.17.0",
     "eslint-plugin-lodash": ">=2.7.0",
     "eslint-plugin-promise": ">=3.8.0",
-    "eslint-plugin-react": ">=7.9.0"
+    "eslint-plugin-react": ">=7.9.0",
+    "prettier": ">=1.13.0"
   },
   "repository": {
     "type": "git",
