@@ -1,0 +1,42 @@
+{
+  "name": "eslint-config-ai",
+  "version": "1.0.0",
+  "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-find-rules": "3.2.3",
+    "eslint-plugin-compat": "2.4.0",
+    "eslint-plugin-jest": "21.17.0",
+    "eslint-plugin-lodash": "2.7.0",
+    "eslint-plugin-promise": "3.8.0",
+    "eslint-plugin-react": "7.9.1",
+    "prettier": "1.13.5"
+  },
+  "peerDependencies": {
+    "babel-eslint": ">=8.2.0",
+    "eslint": ">=4.19.0",
+    "eslint-config-prettier": ">=2.9.0",
+    "eslint-plugin-compat": ">=2.4.0",
+    "eslint-plugin-jest": ">=21.17.0",
+    "eslint-plugin-lodash": ">=2.7.0",
+    "eslint-plugin-promise": ">=3.8.0",
+    "eslint-plugin-react": ">=7.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexilyaev/eslint-config-ai.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Alex Ilyaev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexilyaev/eslint-config-ai/issues"
+  },
+  "homepage": "https://github.com/alexilyaev/eslint-config-ai#readme"
+}
