@@ -8,12 +8,15 @@
 module.exports = {
   arrowParens: 'avoid',
   bracketSpacing: true,
+  endOfLine: 'auto',
+  htmlWhitespaceSensitivity: 'css',
   jsxBracketSameLine: false,
-  printWidth: 100,
+  jsxSingleQuote: false,
+  printWidth: 100, // default: 80
+  proseWrap: 'preserve',
   semi: true,
-  singleQuote: true,
+  singleQuote: true, // default: false
   tabWidth: 2,
   trailingComma: 'none',
-  useTabs: false,
-  proseWrap: 'preserve'
+  useTabs: false
 };

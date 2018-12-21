@@ -13,7 +13,7 @@
     "eslint-plugin-lodash": "2.7.0",
     "eslint-plugin-promise": "3.8.0",
     "eslint-plugin-react": "7.9.1",
-    "prettier": "1.13.5"
+    "prettier": "1.15.3"
   },
   "peerDependencies": {
     "babel-eslint": ">=8.2.0",
