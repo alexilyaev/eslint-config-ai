@@ -1,3 +1,4 @@
+/* eslint-disable line-comment-position, no-inline-comments */
 'use strict';
 
 /**
