@@ -18,6 +18,14 @@ module.exports = {
     sourceType: 'script'
   },
 
+  // Shouldn't need this in the future:
+  // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+
   rules: {
     // eslint-plugin-compat
     'compat/compat': 1,
