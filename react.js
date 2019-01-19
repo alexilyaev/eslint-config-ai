@@ -101,6 +101,8 @@ module.exports = {
       1,
       {
         order: [
+          'type-annotations',
+          'instance-variables',
           'static-methods',
           'lifecycle',
           '/^on.+$/',
