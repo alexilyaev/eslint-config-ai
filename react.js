@@ -105,6 +105,7 @@ module.exports = {
           'instance-variables',
           'static-methods',
           'lifecycle',
+          'instance-methods',
           '/^on.+$/',
           '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
           'everything-else',
