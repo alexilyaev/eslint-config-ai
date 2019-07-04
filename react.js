@@ -76,6 +76,9 @@ module.exports = {
     'react/jsx-no-comment-textnodes': 0,
     'react/jsx-no-literals': 0,
     'react/jsx-sort-props': 0,
+    // https://github.com/yannickcr/eslint-plugin-react/issues/1707
+    'react/no-did-mount-set-state': 0,
+    'react/no-did-update-set-state': 0,
 
     // Warning
     'react/boolean-prop-naming': 1,
@@ -84,8 +87,6 @@ module.exports = {
     'react/forbid-foreign-prop-types': 1,
     'react/no-children-prop': 1,
     'react/no-danger-with-children': 1,
-    'react/no-did-mount-set-state': 1,
-    'react/no-did-update-set-state': 1,
     'react/no-will-update-set-state': 1,
     'react/no-multi-comp': [1, { ignoreStateless: true }],
     'react/no-redundant-should-component-update': 1,
