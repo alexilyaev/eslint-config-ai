@@ -19,12 +19,14 @@
     "babel-eslint": ">=8.2.0",
     "eslint": ">=4.19.0",
     "eslint-config-prettier": ">=2.9.0",
+    "prettier": ">=1.13.0"
+  },
+  "optionalDependencies": {
     "eslint-plugin-compat": ">=2.4.0",
     "eslint-plugin-jest": ">=21.17.0",
     "eslint-plugin-lodash": ">=2.7.0",
     "eslint-plugin-promise": ">=3.8.0",
-    "eslint-plugin-react": ">=7.9.0",
-    "prettier": ">=1.13.0"
+    "eslint-plugin-react": ">=7.9.0"
   },
   "repository": {
     "type": "git",

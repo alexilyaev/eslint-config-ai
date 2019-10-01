@@ -45,7 +45,11 @@ module.exports = {
     'no-multiple-empty-lines': [0, { max: 1 }],
     'no-trailing-spaces': 0,
     'object-curly-spacing': [0, 'always'],
-    'operator-linebreak': [0, 'after', { overrides: { '?': 'before', ':': 'before' } }],
+    'operator-linebreak': [
+      0,
+      'after',
+      { overrides: { '?': 'before', ':': 'before' } }
+    ],
     semi: [0, 'always'],
     'semi-spacing': [0, { before: false, after: true }],
     'semi-style': [0, 'last'],
@@ -53,13 +57,18 @@ module.exports = {
     'switch-colon-spacing': [0, { before: false, after: true }],
     'func-call-spacing': [0, 'never'],
     'function-paren-newline': [0, 'multiline'],
+    'prefer-arrow-callback': 0,
 
     // Warning
     'array-callback-return': 1,
     curly: [1, 'all'],
     eqeqeq: [1, 'always'],
     'linebreak-style': [1, 'unix'],
-    'lines-between-class-members': [1, 'always', { exceptAfterSingleLine: true }],
+    'lines-between-class-members': [
+      1,
+      'always',
+      { exceptAfterSingleLine: true }
+    ],
     'line-comment-position': [1, 'above'],
     'newline-after-var': [1, 'always'],
     'newline-before-return': 1,
@@ -78,7 +87,10 @@ module.exports = {
     'no-unused-vars': [1, { vars: 'all', args: 'after-used' }],
     'no-useless-constructor': 1,
     'no-var': 1,
-    'no-warning-comments': [1, { terms: ['fixme', 'todo', 'hack', 'review', 'xxx'] }],
+    'no-warning-comments': [
+      1,
+      { terms: ['fixme', 'todo', 'hack', 'review', 'xxx'] }
+    ],
     'no-return-await': 1,
     'no-throw-literal': 1,
     'require-await': 1,
@@ -88,7 +100,6 @@ module.exports = {
       { blankLine: 'always', prev: ['const', 'let'], next: '*' },
       { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] }
     ],
-    'prefer-arrow-callback': 1,
     'prefer-const': 1,
     'spaced-comment': [1, 'always', { exceptions: ['-'] }],
 
