@@ -58,12 +58,12 @@ module.exports = {
     'func-call-spacing': [0, 'never'],
     'function-paren-newline': [0, 'multiline'],
     'prefer-arrow-callback': 0,
+    'linebreak-style': [0, 'unix'],
 
     // Warning
     'array-callback-return': 1,
     curly: [1, 'all'],
     eqeqeq: [1, 'always'],
-    'linebreak-style': [1, 'unix'],
     'lines-between-class-members': [
       1,
       'always',
