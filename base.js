@@ -70,8 +70,6 @@ module.exports = {
       { exceptAfterSingleLine: true }
     ],
     'line-comment-position': [1, 'above'],
-    'newline-after-var': [1, 'always'],
-    'newline-before-return': 1,
     'no-console': 0,
     'no-constant-condition': [1, { checkLoops: false }],
     'no-debugger': 1,

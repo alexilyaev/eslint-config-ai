@@ -1,27 +1,31 @@
 {
   "name": "eslint-config-ai",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
+  "scripts": {
+    "lint-eslint-deprecated-rules": "eslint-find-rules -d all.js",
+    "lint": "npm run lint-eslint-deprecated-rules"
+  },
   "devDependencies": {
-    "babel-eslint": "8.2.3",
-    "eslint": "4.19.1",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-find-rules": "3.2.3",
-    "prettier": "1.15.3"
+    "babel-eslint": "10.0.3",
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "6.4.0",
+    "eslint-find-rules": "3.4.0",
+    "prettier": "1.18.2"
   },
   "peerDependencies": {
-    "babel-eslint": ">=8.2.0",
-    "eslint": ">=4.19.0",
-    "eslint-config-prettier": ">=2.9.0",
-    "prettier": ">=1.13.0"
+    "babel-eslint": ">=10.0.3",
+    "eslint": ">=6.5.1",
+    "eslint-config-prettier": ">=6.4.0",
+    "prettier": ">=1.18.2"
   },
   "optionalDependencies": {
     "eslint-plugin-compat": ">=2.4.0",
     "eslint-plugin-jest": ">=21.17.0",
     "eslint-plugin-lodash": ">=2.7.0",
-    "eslint-plugin-promise": ">=3.8.0",
-    "eslint-plugin-react": ">=7.9.0"
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.16.0"
   },
   "repository": {
     "type": "git",
