@@ -21,6 +21,12 @@ _save_yarn_cache: &save_yarn_cache
   paths:
     - ~/.cache/yarn
 
+_link_self_as_dependency: &link_self_as_dependency
+  name: 'Link `eslint-config-ai` as a dependency'
+  command: |
+    yarn link
+    yarn link eslint-config-ai
+
 _defaults: &defaults
   steps:
     - run: node -v
@@ -28,14 +34,8 @@ _defaults: &defaults
     - restore_cache: *restore_yarn_cache
     - run: yarn install --frozen-lockfile
     - save_cache: *save_yarn_cache
-    - run:
-        name: 'Link eslint-config-ai as a node_modules package'
-        command: |
-          yarn link
-          yarn link eslint-config-ai
-    # Can't enforce this quite yet:
-    # https://github.com/prettier/eslint-config-prettier/issues/112
-    - run: npm run lint || echo "ignore failure for now"
+    - run: *link_self_as_dependency
+    - run: npm run lint
 
 # Setup
 

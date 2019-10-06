@@ -4,8 +4,9 @@
   "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "scripts": {
-    "lint-eslint-deprecated-rules": "eslint-find-rules -d all.js",
-    "lint": "npm run lint-eslint-deprecated-rules"
+    "lint-eslint-deprecated-rules": "eslint-find-rules -d all.js || echo \"ignore failure for now\"",
+    "lint-eslint-config-prettier": "eslint --print-config .eslintrc | eslint-config-prettier-check",
+    "lint": "npm run lint-eslint-config-prettier && npm run lint-eslint-deprecated-rules"
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
