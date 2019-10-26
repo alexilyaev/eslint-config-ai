@@ -26,7 +26,13 @@ module.exports = {
     'lodash/prefer-lodash-method': [
       1,
       {
-        ignoreMethods: ['reverse', 'replace', 'split', 'to(Lower|Upper)Case', 'trim'],
+        ignoreMethods: [
+          'reverse',
+          'replace',
+          'split',
+          'to(Lower|Upper)Case',
+          'trim'
+        ],
         ignoreObjects: ['Promise', '$']
       }
     ]
