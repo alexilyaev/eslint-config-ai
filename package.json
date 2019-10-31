@@ -11,7 +11,8 @@
     "lint-eslint": "npm run base-eslint -- --max-warnings 0 \"**/*.js\"",
     "lint-eslint-deprecated-rules": "ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=1 eslint-find-rules --deprecated all.js",
     "lint-eslint-config-prettier": "eslint --print-config .eslintrc | eslint-config-prettier-check",
-    "lint": "npm run lint-prettier && npm run lint-eslint && npm run lint-eslint-config-prettier && npm run lint-eslint-deprecated-rules"
+    "lint": "npm run lint-prettier && npm run lint-eslint && npm run lint-eslint-config-prettier && npm run lint-eslint-deprecated-rules",
+    "postpublish": "git push --tags"
   },
   "husky": {
     "hooks": {
