@@ -19,7 +19,7 @@
       "npm run base-eslint -- --fix --max-warnings 0",
       "npm run base-prettier -- --write"
     ],
-    "*.{json,md,mdx}": [
+    "*.{json,md}": [
       "npm run base-prettier -- --write"
     ]
   },
