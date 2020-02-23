@@ -5,19 +5,6 @@ module.exports = {
 
   extends: ['plugin:lodash/recommended'],
 
-  env: {
-    es6: true
-  },
-
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true
-    },
-    sourceType: 'script'
-  },
-
   rules: {
     // eslint-plugin-lodash
     'lodash/chaining': 0,
@@ -31,10 +18,10 @@ module.exports = {
           'replace',
           'split',
           'to(Lower|Upper)Case',
-          'trim'
+          'trim',
         ],
-        ignoreObjects: ['Promise', '$']
-      }
-    ]
-  }
+        ignoreObjects: ['Promise', '$'],
+      },
+    ],
+  },
 };

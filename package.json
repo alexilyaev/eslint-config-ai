@@ -14,24 +14,27 @@
     "lint": "npm run lint-prettier && npm run lint-eslint && npm run lint-eslint-config-prettier && npm run lint-eslint-deprecated-rules",
     "postpublish": "git push --tags"
   },
+  "lint-staged": {
+    "*.js": [
+      "npm run base-eslint -- --fix --max-warnings 0",
+      "npm run base-prettier -- --write"
+    ],
+    "*.{json,md,mdx}": [
+      "npm run base-prettier -- --write"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*": [
-      "npm run lint -- --fix --max-warnings 0",
-      "npm run base-prettier -- --write"
-    ]
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-find-rules": "3.4.0",
-    "husky": "4.2.1",
-    "lint-staged": "10.0.4",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.7",
     "prettier": "1.19.1"
   },
   "peerDependencies": {

@@ -5,16 +5,13 @@ module.exports = {
 
   env: {
     es6: true,
-    node: true
+    node: true,
   },
 
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true
-    },
-    sourceType: 'script'
+    sourceType: 'script',
   },
 
   rules: {
@@ -38,9 +35,9 @@ module.exports = {
           ImportDeclaration: true,
           ImportSpecifier: true,
           AssignmentExpression: true,
-          ClassProperty: true
-        }
-      }
+          ClassProperty: true,
+        },
+      },
     ],
     'no-multiple-empty-lines': [0, { max: 1 }],
     'no-trailing-spaces': 0,
@@ -48,7 +45,7 @@ module.exports = {
     'operator-linebreak': [
       0,
       'after',
-      { overrides: { '?': 'before', ':': 'before' } }
+      { overrides: { '?': 'before', ':': 'before' } },
     ],
     semi: [0, 'always'],
     'semi-spacing': [0, { before: false, after: true }],
@@ -67,7 +64,7 @@ module.exports = {
     'lines-between-class-members': [
       1,
       'always',
-      { exceptAfterSingleLine: true }
+      { exceptAfterSingleLine: true },
     ],
     'line-comment-position': [1, 'above'],
     'no-console': 0,
@@ -87,7 +84,7 @@ module.exports = {
     'no-var': 1,
     'no-warning-comments': [
       1,
-      { terms: ['fixme', 'todo', 'hack', 'review', 'xxx'] }
+      { terms: ['fixme', 'todo', 'hack', 'review', 'xxx'] },
     ],
     'no-return-await': 1,
     'no-throw-literal': 1,
@@ -96,11 +93,11 @@ module.exports = {
       1,
       { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'always', prev: ['const', 'let'], next: '*' },
-      { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] }
+      { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
     ],
     'prefer-const': 1,
     'spaced-comment': [1, 'always', { exceptions: ['-'] }],
 
-    strict: [1, 'global']
-  }
+    strict: [1, 'global'],
+  },
 };

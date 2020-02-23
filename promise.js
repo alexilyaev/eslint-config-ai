@@ -3,19 +3,6 @@
 module.exports = {
   plugins: ['promise'],
 
-  env: {
-    es6: true
-  },
-
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true
-    },
-    sourceType: 'script'
-  },
-
   rules: {
     // eslint-plugin-promise
     'promise/always-return': 0,
@@ -31,6 +18,6 @@ module.exports = {
     'promise/param-names': 1,
     'promise/prefer-await-to-callbacks': 0,
     'promise/prefer-await-to-then': 0,
-    'promise/valid-params': 1
-  }
+    'promise/valid-params': 1,
+  },
 };

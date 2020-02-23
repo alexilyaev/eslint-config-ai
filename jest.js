@@ -5,19 +5,6 @@ module.exports = {
 
   extends: ['plugin:jest/recommended'],
 
-  env: {
-    es6: true
-  },
-
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true
-    },
-    sourceType: 'script'
-  },
-
   rules: {
     // eslint-plugin-jest
     'jest/consistent-test-it': 1,
@@ -29,7 +16,7 @@ module.exports = {
     'jest/prefer-to-be-undefined': 1,
     'jest/prefer-expect-assertions': 0,
     'jest/valid-describe': 1,
-    'jest/valid-expect-in-promise': 1
+    'jest/valid-expect-in-promise': 1,
   },
 
   // Override config (only applied to files that match the given globs)
@@ -38,8 +25,8 @@ module.exports = {
     {
       files: ['**/*.(spec|test).js'],
       env: {
-        jest: true
-      }
-    }
-  ]
+        jest: true,
+      },
+    },
+  ],
 };

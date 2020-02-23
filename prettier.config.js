@@ -19,5 +19,5 @@ module.exports = {
   singleQuote: true, // default: false
   tabWidth: 2,
   trailingComma: 'es5', // default: none
-  useTabs: false
+  useTabs: false,
 };

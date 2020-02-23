@@ -5,25 +5,19 @@ module.exports = {
 
   extends: ['plugin:react/recommended', 'prettier/react'],
 
-  env: {
-    es6: true
-  },
-
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 6,
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    sourceType: 'script'
   },
 
   // Shouldn't need this in the future:
   // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
 
   rules: {
@@ -42,16 +36,16 @@ module.exports = {
       {
         closingSlash: 'never',
         beforeSelfClosing: 'always',
-        afterOpening: 'never'
-      }
+        afterOpening: 'never',
+      },
     ],
     'react/jsx-wrap-multilines': [
       0,
       {
         declaration: false,
         assignment: false,
-        return: true
-      }
+        return: true,
+      },
     ],
 
     // Disabled
@@ -111,9 +105,9 @@ module.exports = {
           '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
           'everything-else',
           '/^render.+$/',
-          'render'
-        ]
-      }
+          'render',
+        ],
+      },
     ],
     'react/void-dom-elements-no-children': 1,
 
@@ -123,11 +117,11 @@ module.exports = {
       1,
       {
         ignoreRefs: true,
-        allowArrowFunctions: true
-      }
+        allowArrowFunctions: true,
+      },
     ],
     'react/jsx-no-target-blank': 1,
-    'react/jsx-pascal-case': 1
+    'react/jsx-pascal-case': 1,
   },
 
   // Override config (only applied to files that match the given globs)
@@ -137,18 +131,18 @@ module.exports = {
       files: ['app/**/*.js'],
       env: {
         browser: true,
-        node: false
+        node: false,
       },
       globals: {
         process: true,
-        module: true
+        module: true,
       },
       parserOptions: {
-        sourceType: 'module'
+        sourceType: 'module',
       },
       rules: {
-        strict: [1, 'never']
-      }
-    }
-  ]
+        strict: [1, 'never'],
+      },
+    },
+  ],
 };
