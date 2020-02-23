@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ai",
-  "version": "1.7.2",
+  "version": "1.8.0",
   "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "scripts": {
