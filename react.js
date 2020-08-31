@@ -21,10 +21,20 @@ module.exports = {
   },
 
   rules: {
-    // eslint-plugin-compat
+    /**
+     * eslint-plugin-compat
+     *
+     * @see
+     * https://github.com/amilajack/eslint-plugin-compat
+     */
     'compat/compat': 1,
 
-    // eslint-plugin-react
+    /**
+     * eslint-plugin-react
+     *
+     * @see
+     * https://github.com/yannickcr/eslint-plugin-react
+     */
 
     // Disabled, May conflict with Prettier
     'react/jsx-closing-bracket-location': [0, 'line-aligned'],
@@ -126,7 +136,7 @@ module.exports = {
 
   // Override config (only applied to files that match the given globs)
   overrides: [
-    // JS files inside `app`
+    // Client files
     {
       files: ['app/**/*.js'],
       env: {
@@ -141,6 +151,7 @@ module.exports = {
         sourceType: 'module',
       },
       rules: {
+        // In ES6 modules, 'use strict' is enabled by default
         strict: [1, 'never'],
       },
     },

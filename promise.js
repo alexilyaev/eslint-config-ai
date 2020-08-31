@@ -4,7 +4,12 @@ module.exports = {
   plugins: ['promise'],
 
   rules: {
-    // eslint-plugin-promise
+    /**
+     * eslint-plugin-promise
+     *
+     * @see
+     * https://github.com/xjamundx/eslint-plugin-promise
+     */
     'promise/always-return': 0,
     'promise/avoid-new': 0,
     'promise/catch-or-return': 1,

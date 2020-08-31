@@ -1,5 +1,10 @@
 'use strict';
 
+const prettierConfig = require('./prettier.config');
+
+// Support custom settings when running ESLint from an npm script
+const npmLintMode = process.env.npm_lifecycle_event === 'base-eslint';
+
 module.exports = {
   extends: ['eslint:recommended', 'prettier'],
 
@@ -17,7 +22,6 @@ module.exports = {
   rules: {
     // Disabled, May conflict with Prettier
     quotes: [0, 'single', { allowTemplateLiterals: true }],
-    'max-len': [0, { code: 100, ignoreUrls: true }],
     'arrow-parens': [0, 'as-needed'],
     'arrow-spacing': 0,
     'brace-style': [0, '1tbs', { allowSingleLine: false }],
@@ -57,6 +61,18 @@ module.exports = {
     'prefer-arrow-callback': 0,
     'linebreak-style': [0, 'unix'],
 
+    // Special rules on top of Prettier changes
+    'max-len': [
+      1,
+      {
+        code: prettierConfig.printWidth,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+
     // Warning
     'array-callback-return': 1,
     curly: [1, 'all'],
@@ -67,7 +83,7 @@ module.exports = {
       { exceptAfterSingleLine: true },
     ],
     'line-comment-position': [1, 'above'],
-    'no-console': 0,
+    'no-console': npmLintMode ? [1, { allow: ['error'] }] : 0,
     'no-constant-condition': [1, { checkLoops: false }],
     'no-debugger': 1,
     'no-else-return': 1,
@@ -89,14 +105,20 @@ module.exports = {
     'no-return-await': 1,
     'no-throw-literal': 1,
     'require-await': 1,
+    'require-yield': 1,
     'padding-line-between-statements': [
       1,
       { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'always', prev: ['const', 'let'], next: '*' },
       { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
+      { blankLine: 'always', prev: '*', next: 'try' },
+      { blankLine: 'always', prev: '*', next: 'if' },
+      { blankLine: 'any', prev: 'if', next: 'if' },
     ],
     'prefer-const': 1,
+    'prefer-template': 1,
     'spaced-comment': [1, 'always', { exceptions: ['-'] }],
+    'no-implicit-coercion': 1,
 
     strict: [1, 'global'],
   },

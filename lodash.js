@@ -6,7 +6,12 @@ module.exports = {
   extends: ['plugin:lodash/recommended'],
 
   rules: {
-    // eslint-plugin-lodash
+    /**
+     * eslint-plugin-lodash
+     *
+     * @see
+     * https://github.com/wix/eslint-plugin-lodash
+     */
     'lodash/chaining': 0,
     'lodash/prefer-constant': [1, false, true],
     'lodash/import-scope': [1, 'full'],

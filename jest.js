@@ -6,7 +6,12 @@ module.exports = {
   extends: ['plugin:jest/recommended'],
 
   rules: {
-    // eslint-plugin-jest
+    /**
+     * eslint-plugin-jest
+     *
+     * @see
+     * https://github.com/jest-community/eslint-plugin-jest
+     */
     'jest/consistent-test-it': 1,
     'jest/lowercase-name': 0,
     'jest/no-hooks': 0,
