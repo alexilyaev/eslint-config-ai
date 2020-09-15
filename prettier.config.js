@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * Ref:
+ * @see
  * https://prettier.io/docs/en/options.html
  */
 

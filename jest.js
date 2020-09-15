@@ -23,15 +23,4 @@ module.exports = {
     'jest/valid-describe': 1,
     'jest/valid-expect-in-promise': 1,
   },
-
-  // Override config (only applied to files that match the given globs)
-  overrides: [
-    // Test files
-    {
-      files: ['**/*.(spec|test).js'],
-      env: {
-        jest: true,
-      },
-    },
-  ],
 };
