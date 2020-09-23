@@ -10,15 +10,24 @@ pretty quickly.
 
 ## What's included?
 
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- `ai`
+  - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
   - Assumes you're using [Prettier](https://github.com/prettier/prettier)
-  - Disabling styling rules that are covered by Prettier
-- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
-- [eslint-plugin-lodash](https://github.com/wix/eslint-plugin-lodash)
-- [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
-- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
-- [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
-- [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
+  - Disables styling rules that are covered by Prettier.
+- `ai/import`
+  - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
+- `ai/jest`
+  - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+- `ai/lodash`
+  - [eslint-plugin-lodash](https://github.com/wix/eslint-plugin-lodash)
+- `ai/promise`
+  - [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
+- `ai/react`
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+  - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+  - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+  - [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
+  - Disables React related styling rules that are covered by Prettier.
 
 ## Installation
 
@@ -31,7 +40,7 @@ yarn add -D eslint babel-eslint prettier eslint-config-prettier eslint-config-ai
 Optional (based on the configs you choose):
 
 ```shell
-yarn add -D eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-compat eslint-plugin-react eslint-plugin-import
+yarn add -D eslint-plugin-import eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-compat
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
@@ -56,7 +65,7 @@ You can choose which plugin to add
 
 ```json
 {
-  "extends": ["ai", "ai/jest", "ai/lodash", "ai/import"]
+  "extends": ["ai", "ai/import", "ai/jest", "ai/lodash"]
 }
 ```
 

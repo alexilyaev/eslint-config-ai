@@ -1,16 +1,11 @@
 'use strict';
 
 module.exports = {
-  plugins: ['react', 'compat'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', 'compat'],
 
   extends: ['plugin:react/recommended', 'prettier/react'],
 
   parser: 'babel-eslint',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
 
   rules: {
     /**
@@ -125,6 +120,41 @@ module.exports = {
     ],
     'react/jsx-no-target-blank': 1,
     'react/jsx-pascal-case': 1,
+
+    /**
+     * eslint-plugin-react-hooks
+     *
+     * @see
+     * https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+     */
+    'react-hooks/rules-of-hooks': 1,
+    'react-hooks/exhaustive-deps': 1,
+
+    /**
+     * eslint-plugin-jsx-a11y
+     *
+     * @see
+     * https://github.com/evcohen/eslint-plugin-jsx-a11y
+     */
+    'jsx-a11y/aria-props': 1,
+    'jsx-a11y/heading-has-content': 0,
+    'jsx-a11y/href-no-hash': 0,
+    'jsx-a11y/label-has-associated-control': [
+      1,
+      {
+        // NOTE: If this error triggers, either disable it or add
+        // your custom components, labels and attributes via these options
+        // See https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
+        controlComponents: ['Input'],
+      },
+    ],
+    'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/mouse-events-have-key-events': 1,
+    'jsx-a11y/no-autofocus': 0,
+    'jsx-a11y/no-noninteractive-tabindex': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/role-has-required-aria-props': 1,
+    'jsx-a11y/role-supports-aria-props': 1,
   },
 
   // Specific settings used by different plugins
@@ -151,6 +181,9 @@ module.exports = {
       },
       parserOptions: {
         sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       rules: {
         // In ES6 modules, 'use strict' is enabled by default
