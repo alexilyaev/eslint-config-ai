@@ -18,19 +18,20 @@ pretty quickly.
 - [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
 - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 - [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
+- [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
 
 ## Installation
 
 Required:
 
-```
+```shell
 yarn add -D eslint babel-eslint prettier eslint-config-prettier eslint-config-ai
 ```
 
 Optional (based on the configs you choose):
 
-```
-yarn add -D eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-compat eslint-plugin-react
+```shell
+yarn add -D eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-compat eslint-plugin-react eslint-plugin-import
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
@@ -55,7 +56,7 @@ You can choose which plugin to add
 
 ```json
 {
-  "extends": ["ai", "ai/jest", "ai/lodash", "ai/promise"]
+  "extends": ["ai", "ai/jest", "ai/lodash", "ai/import"]
 }
 ```
 
@@ -84,3 +85,4 @@ You can see what's currently configured in these files:
 - [lodash](./lodash.js)
 - [promise](./promise.js)
 - [react](./react.js)
+- [import](./import.js)

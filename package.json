@@ -45,6 +45,7 @@
   },
   "optionalDependencies": {
     "eslint-plugin-compat": ">=3.8.0",
+    "eslint-plugin-import": ">=2.22.0",
     "eslint-plugin-jest": ">=24.0.0",
     "eslint-plugin-lodash": ">=7.1.0",
     "eslint-plugin-promise": ">=4.2.1",

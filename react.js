@@ -12,14 +12,6 @@ module.exports = {
     },
   },
 
-  // Shouldn't need this in the future:
-  // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-
   rules: {
     /**
      * eslint-plugin-compat
@@ -102,6 +94,7 @@ module.exports = {
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }],
     'react/react-in-jsx-scope': 1,
     'react/self-closing-comp': 1,
+    // Relevant for class components only
     'react/sort-comp': [
       1,
       {
@@ -132,6 +125,15 @@ module.exports = {
     ],
     'react/jsx-no-target-blank': 1,
     'react/jsx-pascal-case': 1,
+  },
+
+  // Specific settings used by different plugins
+  settings: {
+    // Shouldn't need this in the future:
+    // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
+    react: {
+      version: 'detect',
+    },
   },
 
   // Override config (only applied to files that match the given globs)
