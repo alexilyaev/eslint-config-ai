@@ -3,10 +3,11 @@
 module.exports = {
   extends: [
     'ai',
-    'ai/react',
+    'ai/unicorn',
+    'ai/import',
     'ai/jest',
     'ai/lodash',
     'ai/promise',
-    'ai/import',
+    'ai/react',
   ],
 };

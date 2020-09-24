@@ -14,6 +14,8 @@ pretty quickly.
   - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
   - Assumes you're using [Prettier](https://github.com/prettier/prettier)
   - Disables styling rules that are covered by Prettier.
+- `ai/unicorn`
+  - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - `ai/import`
   - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
 - `ai/jest`
@@ -65,7 +67,7 @@ You can choose which plugin to add
 
 ```json
 {
-  "extends": ["ai", "ai/import", "ai/jest", "ai/lodash"]
+  "extends": ["ai", "ai/unicorn", "ai/import", "ai/jest", "ai/lodash"]
 }
 ```
 
@@ -90,8 +92,9 @@ You can choose which plugin to add
 You can see what's currently configured in these files:
 
 - [base](./base.js)
+- [unicorn](./unicorn.js)
+- [import](./import.js)
 - [jest](./jest.js)
 - [lodash](./lodash.js)
 - [promise](./promise.js)
 - [react](./react.js)
-- [import](./import.js)
