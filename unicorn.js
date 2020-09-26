@@ -3,7 +3,7 @@
 module.exports = {
   plugins: ['unicorn'],
 
-  extends: ['plugin:unicorn/recommended'],
+  extends: ['plugin:unicorn/recommended', 'prettier/unicorn'],
 
   rules: {
     /**

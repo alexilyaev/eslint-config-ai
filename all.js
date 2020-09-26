@@ -9,5 +9,6 @@ module.exports = {
     'ai/lodash',
     'ai/promise',
     'ai/react',
+    'ai/jsdoc',
   ],
 };

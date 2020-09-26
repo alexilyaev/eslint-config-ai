@@ -30,6 +30,8 @@ pretty quickly.
   - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
   - Disables React related styling rules that are covered by Prettier.
+- `ai/jsdoc`
+  - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 
 ## Installation
 
@@ -42,7 +44,7 @@ yarn add -D eslint babel-eslint prettier eslint-config-prettier eslint-config-ai
 Optional (based on the configs you choose):
 
 ```shell
-yarn add -D eslint-plugin-import eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-compat
+yarn add -D eslint-plugin-import eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-compat eslint-plugin-jsdoc
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
@@ -67,7 +69,15 @@ You can choose which plugin to add
 
 ```json
 {
-  "extends": ["ai", "ai/unicorn", "ai/import", "ai/jest", "ai/lodash"]
+  "extends": [
+    "ai",
+    "ai/unicorn",
+    "ai/import",
+    "ai/jest",
+    "ai/lodash",
+    "ai/promise",
+    "ai/jsdoc"
+  ]
 }
 ```
 
@@ -98,3 +108,4 @@ You can see what's currently configured in these files:
 - [lodash](./lodash.js)
 - [promise](./promise.js)
 - [react](./react.js)
+- [jsdoc](./jsdoc.js)
