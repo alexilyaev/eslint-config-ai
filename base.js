@@ -3,7 +3,9 @@
 const prettierConfig = require('./prettier.config');
 
 // Support custom settings when running ESLint from an npm script
-const npmLintMode = process.env.npm_lifecycle_event === 'base-eslint';
+const npmLintMode = ['base-eslint', 'eslint:base'].includes(
+  process.env.npm_lifecycle_event
+);
 
 module.exports = {
   extends: ['eslint:recommended', 'prettier'],

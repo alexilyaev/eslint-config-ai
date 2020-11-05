@@ -110,7 +110,10 @@ module.exports = {
     'react/void-dom-elements-no-children': 1,
 
     'react/jsx-boolean-value': [1, 'never'],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'react/jsx-no-bind': [
       1,
       {
@@ -170,7 +173,7 @@ module.exports = {
   overrides: [
     // Client files
     {
-      files: ['app/**/*.js'],
+      files: ['{app,src}/**/*.{j,t}s?(x)'],
       env: {
         browser: true,
         node: false,
@@ -178,6 +181,7 @@ module.exports = {
       globals: {
         process: true,
         module: true,
+        require: true,
       },
       parserOptions: {
         sourceType: 'module',
