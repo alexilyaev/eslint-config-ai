@@ -18,7 +18,7 @@ module.exports = {
     'unicorn/consistent-function-scoping': 0,
     'unicorn/no-fn-reference-in-iterator': 1,
     'unicorn/no-unsafe-regex': 1,
-    'unicorn/no-unused-properties': 1,
+    'unicorn/no-unused-properties': 0,
     'unicorn/filename-case': 0,
     'unicorn/no-reduce': 0,
   },
