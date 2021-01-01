@@ -151,7 +151,6 @@ module.exports = {
         controlComponents: ['Input'],
       },
     ],
-    'jsx-a11y/label-has-for': 0,
     'jsx-a11y/mouse-events-have-key-events': 1,
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/no-noninteractive-tabindex': 0,
