@@ -48,6 +48,7 @@ module.exports = {
     // Disabled
     'react/forbid-elements': 0,
     'react/forbid-prop-types': [0, { forbid: ['any', 'array', 'object'] }],
+    'react/forbid-component-props': [0, { forbid: ['className', 'style'] }],
     'react/no-array-index-key': 0,
     'react/no-danger': 0,
     'react/no-set-state': 0,
@@ -74,7 +75,6 @@ module.exports = {
     // Warning
     'react/boolean-prop-naming': 1,
     'react/default-props-match-prop-types': 1,
-    'react/forbid-component-props': [1, { forbid: ['className', 'style'] }],
     'react/forbid-foreign-prop-types': 1,
     'react/no-children-prop': 1,
     'react/no-danger-with-children': 1,
