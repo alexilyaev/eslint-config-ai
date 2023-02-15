@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-ai",
   "version": "2.6.1",
-  "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev 123",
+  "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
