@@ -4,6 +4,7 @@
   "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "base-prettier": "prettier --ignore-path .gitignore",
     "base-eslint": "eslint --ignore-path .gitignore",
     "lint-eslint": "npm run base-eslint -- --max-warnings 0 \"**/*.js\"",
@@ -22,20 +23,15 @@
       "npm run base-prettier -- --write"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "babel-eslint": "10.1.0",
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.12.0",
     "eslint-find-rules": "3.6.1",
-    "husky": "4.3.0",
-    "jest": "26.4.2",
-    "lint-staged": "10.4.0",
-    "prettier": "2.1.2"
+    "husky": "8.0.3",
+    "jest": "29.4.3",
+    "lint-staged": "13.1.2",
+    "prettier": "2.8.4"
   },
   "peerDependencies": {
     "babel-eslint": ">=10.1.0",
@@ -54,6 +50,10 @@
     "eslint-plugin-react": ">=7.21.0",
     "eslint-plugin-react-hooks": ">=4.1.0",
     "eslint-plugin-unicorn": ">=22.0.0"
+  },
+  "volta": {
+    "node": "18.14.0",
+    "yarn": "1.22.19"
   },
   "repository": {
     "type": "git",
