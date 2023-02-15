@@ -5,12 +5,22 @@
 tmp/**
 .tmp/**
 
-# Sass
-.sass-cache
-
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# TypeScript cache
+*.tsbuildinfo
+# Optional npm cache directory
+.npm
+# Optional eslint cache
+.eslintcache
+# parcel-bundler cache (https://parceljs.org/)
+.cache
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
