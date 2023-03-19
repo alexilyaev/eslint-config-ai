@@ -6,7 +6,7 @@ module.exports = {
 
   root: true,
 
-  extends: ['ai/all'],
+  // extends: ['ai/all'],
 
   parserOptions: {
     sourceType: 'script',
