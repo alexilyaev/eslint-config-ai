@@ -1,8 +1,10 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
   plugins: ['promise'],
-
   rules: {
     /**
      * eslint-plugin-promise

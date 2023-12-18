@@ -1,8 +1,31 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
+  extends: [
+    // https://github.com/import-js/eslint-plugin-import/tree/main/config
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+  ],
   plugins: ['import'],
-
+  /**
+   * NOTE:
+   * Add this if you're using Webpack aliases...
+   */
+  // Specific settings used by different plugins
+  // settings: {
+  //   // Support custom aliases
+  //   // https://github.com/benmosher/eslint-plugin-import#resolvers
+  //   'import/resolver': {
+  //     // https://www.npmjs.com/package/eslint-import-resolver-node
+  //     node: {
+  //       moduleDirectory: ['node_modules', __dirname, 'app'],
+  //     },
+  //   },
+  // },
   rules: {
     /**
      * eslint-plugin-import
@@ -70,7 +93,7 @@ module.exports = {
           'hooks',
           'public',
           'components',
-        ].map(identifier => ({
+        ].map((identifier) => ({
           pattern: `${identifier}/**`,
           group: 'internal',
           position: 'after',
@@ -89,19 +112,4 @@ module.exports = {
     'import/group-exports': 0,
     'import/dynamic-import-chunkname': 0,
   },
-
-  // NOTE:
-  // Add this if you're using Webpack aliases...
-  //
-  // Specific settings used by different plugins
-  // settings: {
-  //   // Support custom aliases
-  //   // https://github.com/benmosher/eslint-plugin-import#resolvers
-  //   'import/resolver': {
-  //     // https://www.npmjs.com/package/eslint-import-resolver-node
-  //     node: {
-  //       moduleDirectory: ['node_modules', __dirname, 'app'],
-  //     },
-  //   },
-  // },
 };
