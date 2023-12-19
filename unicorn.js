@@ -1,10 +1,14 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
+  extends: [
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/configs/recommended.js
+    'plugin:unicorn/recommended',
+  ],
   plugins: ['unicorn'],
-
-  extends: ['plugin:unicorn/recommended', 'prettier/unicorn'],
-
   rules: {
     /**
      * eslint-plugin-unicorn (override on top of 'recommended')
@@ -14,12 +18,12 @@ module.exports = {
      */
     'unicorn/explicit-length-check': 0,
     'unicorn/prevent-abbreviations': 0,
-    'unicorn/prefer-node-append': 0,
     'unicorn/consistent-function-scoping': 0,
-    'unicorn/no-fn-reference-in-iterator': 1,
-    'unicorn/no-unsafe-regex': 1,
-    'unicorn/no-unused-properties': 0,
+    // Each project should define it's own filename casing for different folders
     'unicorn/filename-case': 0,
-    'unicorn/no-reduce': 0,
+    // Turn back on as it is turned off in `unicorn/recommended`
+    'no-nested-ternary': 1,
+    // This rule allow single line nested ternary, which we don't like
+    'unicorn/no-nested-ternary': 0,
   },
 };

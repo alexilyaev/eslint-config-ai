@@ -5,15 +5,14 @@
 
 ## Why?
 
-I manage many projects and find myself copy/pasting configs between projects, which got out of hand
-pretty quickly.
+I manage many projects and find myself copy/pasting configs between projects,
+which got out of hand pretty quickly.
 
 ## What's included?
 
 - `ai`
-  - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-  - Assumes you're using [Prettier](https://github.com/prettier/prettier)
-  - Disables styling rules that are covered by Prettier.
+  - [eslint:recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
+  - Common base rules
 - `ai/unicorn`
   - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - `ai/import`
@@ -29,22 +28,42 @@ pretty quickly.
   - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
   - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
-  - Disables React related styling rules that are covered by Prettier.
 - `ai/jsdoc`
   - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
+- `ai/last`
+  - [@stylistic/disable-legacy](https://eslint.style/guide/migration#disable-legacy-rules)
+    - Disables styling rules that were deprecated and moved to `@stylistic`
+  - [prettier](https://github.com/prettier/eslint-config-prettier/tree/main)
+    - Disables styling rules that are covered by Prettier
 
 ## Installation
 
 Required:
 
 ```shell
-yarn add -D eslint babel-eslint prettier eslint-config-prettier eslint-config-ai
+yarn add -D \
+  prettier \
+  eslint \
+  eslint-config-prettier \
+  @stylistic/eslint-plugin \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser \
+  eslint-config-ai
 ```
 
 Optional (based on the configs you choose):
 
 ```shell
-yarn add -D eslint-plugin-import eslint-plugin-jest eslint-plugin-lodash eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-compat eslint-plugin-jsdoc
+yarn add -D \
+  eslint-plugin-import \
+  eslint-plugin-jest \
+  eslint-plugin-lodash \
+  eslint-plugin-promise \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-compat \
+  eslint-plugin-jsdoc
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
@@ -53,13 +72,26 @@ yarn add -D eslint-plugin-import eslint-plugin-jest eslint-plugin-lodash eslint-
 
 Add to your [`.eslintrc`](http://eslint.org/docs/user-guide/configuring):
 
+### Last
+
+Disables styling rules that are covered by Prettier or deprecated and moved to
+`@stylistic`
+
+> Always add `ai/last` as the last `extends`
+
+```json
+{
+  "extends": ["ai/last"]
+}
+```
+
 ### Base rules
 
 This config extends `eslint:recommended` and sets up Prettier
 
 ```json
 {
-  "extends": ["ai"]
+  "extends": ["ai", "ai/last"]
 }
 ```
 
@@ -76,7 +108,8 @@ You can choose which plugin to add
     "ai/jest",
     "ai/lodash",
     "ai/promise",
-    "ai/jsdoc"
+    "ai/jsdoc",
+    "ai/last"
   ]
 }
 ```
@@ -85,11 +118,11 @@ You can choose which plugin to add
 
 ```json
 {
-  "extends": ["ai", "ai/react"]
+  "extends": ["ai", "ai/react", "ai/last"]
 }
 ```
 
-### All (Base + Plugins + React)
+### All (Base + Plugins + React + Last)
 
 ```json
 {
@@ -107,5 +140,6 @@ You can see what's currently configured in these files:
 - [jest](./jest.js)
 - [lodash](./lodash.js)
 - [promise](./promise.js)
-- [react](./react.js)
 - [jsdoc](./jsdoc.js)
+- [react](./react.js)
+- [last](./last.js)

@@ -1,12 +1,19 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
+  extends: ['plugin:react/recommended'],
   plugins: ['react', 'react-hooks', 'jsx-a11y', 'compat'],
-
-  extends: ['plugin:react/recommended', 'prettier/react'],
-
-  parser: 'babel-eslint',
-
+  parser: '@typescript-eslint/parser',
+  settings: {
+    // Shouldn't need this in the future:
+    // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     /**
      * eslint-plugin-compat
@@ -23,28 +30,6 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react
      */
 
-    // Disabled, May conflict with Prettier
-    'react/jsx-closing-bracket-location': [0, 'line-aligned'],
-    'react/jsx-closing-tag-location': 0,
-    'react/jsx-equals-spacing': [0, 'never'],
-    'react/jsx-indent': [0, 2],
-    'react/jsx-tag-spacing': [
-      0,
-      {
-        closingSlash: 'never',
-        beforeSelfClosing: 'always',
-        afterOpening: 'never',
-      },
-    ],
-    'react/jsx-wrap-multilines': [
-      0,
-      {
-        declaration: false,
-        assignment: false,
-        return: true,
-      },
-    ],
-
     // Disabled
     'react/forbid-elements': 0,
     'react/forbid-prop-types': [0, { forbid: ['any', 'array', 'object'] }],
@@ -59,15 +44,10 @@ module.exports = {
     'react/require-optimization': 0,
     'react/style-prop-object': 0,
 
-    'react/jsx-curly-spacing': [0, 'always', { allowMultiline: true }],
-    'react/jsx-first-prop-new-line': 0,
     'react/jsx-handler-names': 0,
-    'react/jsx-indent-props': [0, 2],
     'react/jsx-key': 0,
-    'react/jsx-max-props-per-line': 0,
     'react/jsx-no-comment-textnodes': 0,
     'react/jsx-no-literals': 0,
-    'react/jsx-sort-props': 0,
     // https://github.com/yannickcr/eslint-plugin-react/issues/1707
     'react/no-did-mount-set-state': 0,
     'react/no-did-update-set-state': 0,
@@ -158,16 +138,6 @@ module.exports = {
     'jsx-a11y/role-has-required-aria-props': 1,
     'jsx-a11y/role-supports-aria-props': 1,
   },
-
-  // Specific settings used by different plugins
-  settings: {
-    // Shouldn't need this in the future:
-    // https://github.com/yannickcr/eslint-plugin-react/issues/1955#issuecomment-450780970
-    react: {
-      version: 'detect',
-    },
-  },
-
   // Override config (only applied to files that match the given globs)
   overrides: [
     // Client files

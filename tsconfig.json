@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2021",
+    "types": ["node"]
+  },
+  "include": ["*.js", "**/*.ts"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

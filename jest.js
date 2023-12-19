@@ -1,10 +1,11 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
-  plugins: ['jest'],
-
   extends: ['plugin:jest/recommended'],
-
+  plugins: ['jest'],
   rules: {
     /**
      * eslint-plugin-jest
@@ -17,10 +18,7 @@ module.exports = {
     'jest/no-hooks': 0,
     'jest/no-large-snapshots': 1,
     'jest/no-test-prefixes': 1,
-    'jest/prefer-to-be-null': 1,
-    'jest/prefer-to-be-undefined': 1,
     'jest/prefer-expect-assertions': 0,
-    'jest/valid-describe': 1,
     'jest/valid-expect-in-promise': 1,
   },
 };

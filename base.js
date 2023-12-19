@@ -1,91 +1,30 @@
-'use strict';
+// @ts-check
 
-const prettierConfig = require('./prettier.config');
-
-// Support custom settings when running ESLint from an npm script
-const npmLintMode = ['base-eslint', 'eslint:base'].includes(
-  process.env.npm_lifecycle_event
-);
-
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
-
+  extends: [
+    // https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
+    'eslint:recommended',
+  ],
+  plugins: ['@stylistic'],
   env: {
-    es6: true,
     node: true,
+    es6: true,
+    es2021: true,
   },
-
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'script',
+    ecmaVersion: 2021,
+    sourceType: 'module',
   },
-
   rules: {
-    // Disabled, May conflict with Prettier
-    quotes: [0, 'single', { allowTemplateLiterals: true }],
-    'arrow-parens': [0, 'as-needed'],
-    'arrow-spacing': 0,
-    'brace-style': [0, '1tbs', { allowSingleLine: false }],
-    'eol-last': 0,
-    indent: [0, 2, { SwitchCase: 1 }],
-    'key-spacing': [0, { mode: 'strict' }],
-    'keyword-spacing': 0,
-    'no-extra-semi': 0,
-    'no-mixed-spaces-and-tabs': 0,
-    'no-multi-spaces': [
-      0,
-      {
-        exceptions: {
-          VariableDeclarator: true,
-          ImportDeclaration: true,
-          ImportSpecifier: true,
-          AssignmentExpression: true,
-          ClassProperty: true,
-        },
-      },
-    ],
-    'no-multiple-empty-lines': [0, { max: 1 }],
-    'no-trailing-spaces': 0,
-    'object-curly-spacing': [0, 'always'],
-    'operator-linebreak': [
-      0,
-      'after',
-      { overrides: { '?': 'before', ':': 'before' } },
-    ],
-    semi: [0, 'always'],
-    'semi-spacing': [0, { before: false, after: true }],
-    'semi-style': [0, 'last'],
-    'space-before-blocks': [0, 'always'],
-    'switch-colon-spacing': [0, { before: false, after: true }],
-    'func-call-spacing': [0, 'never'],
-    'function-paren-newline': [0, 'multiline'],
-    'prefer-arrow-callback': 0,
-    'linebreak-style': [0, 'unix'],
-
-    // Special rules on top of Prettier changes
-    'max-len': [
-      1,
-      {
-        code: prettierConfig.printWidth,
-        ignoreUrls: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-      },
-    ],
-
-    // Warning
     'array-callback-return': 1,
     curly: [1, 'all'],
     eqeqeq: [1, 'always'],
-    'lines-between-class-members': [
-      1,
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
     'line-comment-position': [1, 'above'],
-    'no-console': npmLintMode ? [1, { allow: ['error'] }] : 0,
+    'no-console': [1, { allow: ['error'] }],
     'no-constant-condition': [1, { checkLoops: false }],
     'no-debugger': 1,
     'no-else-return': 1,
@@ -104,11 +43,22 @@ module.exports = {
       1,
       { terms: ['fixme', 'todo', 'hack', 'review', 'xxx'] },
     ],
-    'no-return-await': 1,
     'no-throw-literal': 1,
     'require-await': 1,
     'require-yield': 1,
-    'padding-line-between-statements': [
+    'prefer-const': 1,
+    'prefer-template': 1,
+    'no-implicit-coercion': 1,
+
+    /**
+     * ESLint Stylistic
+     */
+    '@stylistic/lines-between-class-members': [
+      1,
+      'always',
+      { exceptAfterSingleLine: true },
+    ],
+    '@stylistic/padding-line-between-statements': [
       1,
       { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'always', prev: ['const', 'let'], next: '*' },
@@ -117,11 +67,6 @@ module.exports = {
       { blankLine: 'always', prev: '*', next: 'if' },
       { blankLine: 'any', prev: 'if', next: 'if' },
     ],
-    'prefer-const': 1,
-    'prefer-template': 1,
-    'spaced-comment': [1, 'always', { exceptions: ['-'] }],
-    'no-implicit-coercion': 1,
-
-    strict: [1, 'global'],
+    '@stylistic/spaced-comment': [1, 'always', { exceptions: ['-'] }],
   },
 };

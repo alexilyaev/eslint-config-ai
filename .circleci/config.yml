@@ -40,21 +40,23 @@ _defaults: &defaults
 # Setup
 
 jobs:
-  node-latest:
+  node-current:
     <<: *defaults
-
     docker:
-      - image: circleci/node:latest
-
+      - image: cimg/node:current
   node-lts:
     <<: *defaults
-
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
+  node-maintenance:
+    <<: *defaults
+    docker:
+      - image: cimg/node:18.12.0
 
 workflows:
   version: 2
   node-multi-build:
     jobs:
-      - node-latest
+      - node-current
       - node-lts
+      - node-maintenance

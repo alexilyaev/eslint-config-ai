@@ -1,26 +1,42 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
-  plugins: ['jsdoc'],
-
   extends: ['plugin:jsdoc/recommended'],
-
+  plugins: ['jsdoc'],
+  settings: {
+    // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/valid-types.md
+    jsdoc: {
+      mode: 'typescript',
+    },
+  },
   rules: {
     /**
-     * Eslint-plugin-jsdoc (override on top of 'jsdoc/recommended').
+     * eslint-plugin-jsdoc (override on top of 'jsdoc/recommended').
      *
      * @see
      * https://github.com/gajus/eslint-plugin-jsdoc
      */
-    'jsdoc/check-indentation': [1, { excludeTags: ['example', 'description'] }],
-    'jsdoc/check-line-alignment': [1, 'always'],
-    'jsdoc/check-syntax': 1,
-    'jsdoc/match-description': 1,
-    'jsdoc/no-bad-blocks': 1,
-    'jsdoc/no-defaults': 1,
+    'jsdoc/tag-lines': [1, 'any', { startLines: 1, endLines: 0 }],
     'jsdoc/require-jsdoc': [
       1,
       { publicOnly: true, exemptEmptyFunctions: true },
     ],
+    // Add rules that are not present or `off` in `jsdoc/recommended`
+    'jsdoc/check-line-alignment': [
+      1,
+      'always',
+      { preserveMainDescriptionPostDelimiter: true },
+    ],
+    'jsdoc/check-syntax': 1,
+    'jsdoc/no-bad-blocks': 1,
   },
+  overrides: [
+    {
+      files: ['*.{ts,tsx}'],
+      extends: ['plugin:jsdoc/recommended-typescript'],
+    },
+  ],
 };

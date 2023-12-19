@@ -1,5 +1,8 @@
-'use strict';
+// @ts-check
 
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
   extends: [
     'ai',
@@ -10,5 +13,6 @@ module.exports = {
     'ai/promise',
     'ai/react',
     'ai/jsdoc',
+    'ai/last',
   ],
 };

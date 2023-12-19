@@ -1,10 +1,9 @@
-'use strict';
-
+/**
+ * @type {import('eslint').ESLint.ConfigData}
+ */
 module.exports = {
-  plugins: ['lodash'],
-
   extends: ['plugin:lodash/recommended'],
-
+  plugins: ['lodash'],
   rules: {
     /**
      * eslint-plugin-lodash
