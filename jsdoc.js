@@ -31,7 +31,19 @@ module.exports = {
     'jsdoc/check-line-alignment': [
       1,
       'always',
-      { preserveMainDescriptionPostDelimiter: true },
+      {
+        preserveMainDescriptionPostDelimiter: true,
+        tags: [
+          'param',
+          'arg',
+          'argument',
+          'property',
+          'prop',
+          // Disabling these as it doesn't look good
+          // 'returns',
+          // 'return',
+        ],
+      },
     ],
     'jsdoc/check-syntax': 1,
     'jsdoc/no-bad-blocks': 1,
