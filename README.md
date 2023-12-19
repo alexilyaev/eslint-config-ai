@@ -25,11 +25,14 @@ which got out of hand pretty quickly.
   - [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
 - `ai/react`
   - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+    - Setting `react/recommended` and `react/jsx-runtime`
   - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
   - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
   - [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)
 - `ai/jsdoc`
   - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
+- `ai/eslint-comments`
+  - [eslint-plugin-eslint-comments](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 - `ai/last`
   - [@stylistic/disable-legacy](https://eslint.style/guide/migration#disable-legacy-rules)
     - Disables styling rules that were deprecated and moved to `@stylistic`
@@ -59,11 +62,12 @@ yarn add -D \
   eslint-plugin-jest \
   eslint-plugin-lodash \
   eslint-plugin-promise \
+  eslint-plugin-jsdoc \
+  eslint-plugin-eslint-comments \
+  eslint-plugin-compat \
   eslint-plugin-react \
   eslint-plugin-react-hooks \
-  eslint-plugin-jsx-a11y \
-  eslint-plugin-compat \
-  eslint-plugin-jsdoc
+  eslint-plugin-jsx-a11y
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
@@ -109,6 +113,7 @@ You can choose which plugin to add
     "ai/lodash",
     "ai/promise",
     "ai/jsdoc",
+    "ai/eslint-comments",
     "ai/last"
   ]
 }
@@ -141,5 +146,6 @@ You can see what's currently configured in these files:
 - [lodash](./lodash.js)
 - [promise](./promise.js)
 - [jsdoc](./jsdoc.js)
+- [eslint-comments](./eslint-comments.js)
 - [react](./react.js)
 - [last](./last.js)

@@ -4,7 +4,10 @@
  * @type {import('eslint').ESLint.ConfigData}
  */
 module.exports = {
-  extends: ['plugin:jsdoc/recommended'],
+  extends: [
+    // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/src/index.js
+    'plugin:jsdoc/recommended',
+  ],
   plugins: ['jsdoc'],
   settings: {
     // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/valid-types.md

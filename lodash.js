@@ -2,7 +2,10 @@
  * @type {import('eslint').ESLint.ConfigData}
  */
 module.exports = {
-  extends: ['plugin:lodash/recommended'],
+  extends: [
+    // https://github.com/wix-incubator/eslint-plugin-lodash/blob/master/src/index.js
+    'plugin:lodash/recommended',
+  ],
   plugins: ['lodash'],
   rules: {
     /**

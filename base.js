@@ -25,6 +25,7 @@ module.exports = {
     eqeqeq: [1, 'always'],
     'line-comment-position': [1, 'above'],
     'no-console': [1, { allow: ['error'] }],
+    'no-constant-binary-expression': 1,
     'no-constant-condition': [1, { checkLoops: false }],
     'no-debugger': 1,
     'no-else-return': 1,

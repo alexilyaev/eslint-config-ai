@@ -4,7 +4,15 @@
  * @type {import('eslint').ESLint.ConfigData}
  */
 module.exports = {
-  extends: ['plugin:react/recommended'],
+  extends: [
+    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/configs/recommended.js
+    'plugin:react/recommended',
+    // Disable global `React` import requirement when using `react-jsx` in `tsconfig.json`
+    // https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+    'plugin:react/jsx-runtime',
+    // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
+    'plugin:react-hooks/recommended',
+  ],
   plugins: ['react', 'react-hooks', 'jsx-a11y', 'compat'],
   parser: '@typescript-eslint/parser',
   settings: {
@@ -17,6 +25,9 @@ module.exports = {
   rules: {
     /**
      * eslint-plugin-compat
+     * Not extending `plugin:compat/recommended`:
+     * https://github.com/amilajack/eslint-plugin-compat/blob/main/src/config/recommended.ts
+     * Because we want only warnings and not errors.
      *
      * @see
      * https://github.com/amilajack/eslint-plugin-compat

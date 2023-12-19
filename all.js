@@ -13,6 +13,7 @@ module.exports = {
     'ai/promise',
     'ai/react',
     'ai/jsdoc',
+    'ai/eslint-comments',
     'ai/last',
   ],
 };
