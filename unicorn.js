@@ -25,5 +25,7 @@ module.exports = {
     'no-nested-ternary': 1,
     // This rule allow single line nested ternary, which we don't like
     'unicorn/no-nested-ternary': 0,
+    // Too many false positives
+    'unicorn/no-array-method-this-argument': 0,
   },
 };

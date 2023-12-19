@@ -160,8 +160,6 @@ module.exports = {
       },
       globals: {
         process: true,
-        module: true,
-        require: true,
       },
       parserOptions: {
         sourceType: 'module',
@@ -169,10 +167,7 @@ module.exports = {
           jsx: true,
         },
       },
-      rules: {
-        // In ES6 modules, 'use strict' is enabled by default
-        strict: [1, 'never'],
-      },
+      rules: {},
     },
   ],
 };
