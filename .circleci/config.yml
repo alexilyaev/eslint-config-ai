@@ -42,15 +42,16 @@ _defaults: &defaults
 jobs:
   node-current:
     <<: *defaults
-
     docker:
       - image: cimg/node:current
-
   node-lts:
     <<: *defaults
-
     docker:
       - image: cimg/node:lts
+  node-maintenance:
+    <<: *defaults
+    docker:
+      - image: cimg/node:18.12.0
 
 workflows:
   version: 2
@@ -58,3 +59,4 @@ workflows:
     jobs:
       - node-current
       - node-lts
+      - node-maintenance
