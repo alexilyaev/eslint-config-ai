@@ -21,6 +21,6 @@ This is mainly for myself, but might useful for others.
     - Update the version in `package.json`
     - Create a git tag
     - Create a git commit
-- `git push --follow-tags`
+- `git push`
 - `npm publish`
 - Update the GitHub Release Notes
