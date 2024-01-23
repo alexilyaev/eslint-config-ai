@@ -51,7 +51,10 @@ module.exports = {
   overrides: [
     {
       files: ['*.{ts,tsx}'],
-      extends: ['plugin:jsdoc/recommended-typescript'],
+      extends: [
+        // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/src/index.js
+        'plugin:jsdoc/recommended-typescript',
+      ],
     },
   ],
 };

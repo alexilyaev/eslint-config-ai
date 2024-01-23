@@ -25,6 +25,14 @@ module.exports = {
   //       moduleDirectory: ['node_modules', __dirname, 'app'],
   //     },
   //   },
+  //   // Or...
+  //   'import/resolver': {
+  //     // https://github.com/import-js/eslint-import-resolver-typescript
+  //     typescript: {
+  //       alwaysTryTypes: true,
+  //       project: `${__dirname}/tsconfig.json`,
+  //     },
+  //   },
   // },
   rules: {
     /**

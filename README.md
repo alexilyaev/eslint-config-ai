@@ -59,6 +59,7 @@ Optional (based on the configs you choose):
 ```shell
 yarn add -D \
   eslint-plugin-import \
+  eslint-import-resolver-typescript \
   eslint-plugin-jest \
   eslint-plugin-lodash \
   eslint-plugin-promise \

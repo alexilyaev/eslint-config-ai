@@ -1,5 +1,3 @@
-/* eslint-disable line-comment-position, no-inline-comments */
-
 /**
  * @see
  * https://prettier.io/docs/en/options.html
@@ -29,7 +27,8 @@ module.exports = {
   quoteProps: 'as-needed',
   semi: true,
   singleAttributePerLine: false,
-  singleQuote: true, // default: false
+  // default: false
+  singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
