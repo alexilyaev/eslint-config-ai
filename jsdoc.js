@@ -1,8 +1,6 @@
 // @ts-check
 
-/**
- * @type {import('eslint').ESLint.ConfigData}
- */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
     // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/src/index.js

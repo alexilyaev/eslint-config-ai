@@ -1,6 +1,6 @@
-/**
- * @type {import('eslint').ESLint.ConfigData}
- */
+// @ts-check
+
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
     // https://github.com/wix-incubator/eslint-plugin-lodash/blob/master/src/index.js

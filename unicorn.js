@@ -1,8 +1,6 @@
 // @ts-check
 
-/**
- * @type {import('eslint').ESLint.ConfigData}
- */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/configs/recommended.js
@@ -27,5 +25,7 @@ module.exports = {
     'unicorn/no-nested-ternary': 0,
     // Too many false positives
     'unicorn/no-array-method-this-argument': 0,
+    // Doesn't play nice with TypeScript in certain cases
+    'unicorn/no-useless-undefined': 'off',
   },
 };

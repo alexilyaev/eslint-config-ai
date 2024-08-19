@@ -1,8 +1,6 @@
 // @ts-check
 
-/**
- * @type {import('eslint').ESLint.ConfigData}
- */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/configs/recommended.js
@@ -78,7 +76,6 @@ module.exports = {
     'react/no-unused-prop-types': 1,
     'react/prefer-es6-class': [1, 'always'],
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }],
-    'react/react-in-jsx-scope': 1,
     'react/self-closing-comp': 1,
     // Relevant for class components only
     'react/sort-comp': [

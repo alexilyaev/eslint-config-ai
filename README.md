@@ -68,7 +68,8 @@ yarn add -D \
   eslint-plugin-compat \
   eslint-plugin-react \
   eslint-plugin-react-hooks \
-  eslint-plugin-jsx-a11y
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-unicorn
 ```
 
 - If you use npm, replace `yarn add` with `npm install`
