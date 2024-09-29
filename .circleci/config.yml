@@ -34,11 +34,10 @@ _defaults: &defaults
     - restore_cache: *restore_pnpm_cache
     - run: pnpm -v
     - run:
-        # Do I need this?
-        # corepack prepare pnpm@latest-9 --activate
         name: Install pnpm package manager
         command: |
           corepack enable
+          corepack prepare pnpm@latest-9 --activate
           pnpm config set store-dir .pnpm-store
     - run: pnpm -v
     - run: pnpm install --frozen-lockfile
