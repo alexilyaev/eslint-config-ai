@@ -124,7 +124,7 @@ module.exports = {
     'import/max-dependencies': 0,
     'import/no-unassigned-import': [
       1,
-      // { allow: ['**/*.css', '@total-typescript/ts-reset'] },
+      { allow: ['**/*.css', '@total-typescript/ts-reset'] },
     ],
     'import/no-named-default': 1,
     'import/no-default-export': 1,
