@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-pnpm lint-staged
+./node_modules/.bin/lint-staged
 
 # Debug
 # exit 1
