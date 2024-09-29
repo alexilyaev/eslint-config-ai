@@ -1,27 +1,31 @@
 {
   "name": "eslint-config-ai",
   "version": "3.3.0",
-  "description": "An opinionated set of ESLint shareable configs by Alex Ilyaev",
+  "description": "Opinionated set of ESLint shareable configs by Alex Ilyaev",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "postpublish": "git push --follow-tags",
-    "base-prettier": "prettier --ignore-path .gitignore",
-    "base-eslint": "eslint --ignore-path .gitignore",
-    "lint-eslint": "npm run base-eslint -- --max-warnings 0 \"**/*.js\"",
+    "lint-eslint": "eslint --max-warnings 0 '**/*.{js,cjs,ts,mts,tsx}'",
     "lint-eslint-deprecated-rules": "ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=1 eslint-find-rules --no-error --deprecated all.js",
     "lint-eslint-config-prettier": "npx eslint-config-prettier index.js",
-    "lint": "npm run lint-eslint && npm run lint-eslint-config-prettier && npm run lint-eslint-deprecated-rules",
-    "format": "npm run base-eslint -- --fix \"**/*.js\" && npm run base-prettier -- --write \"**/*.js\"",
+    "lint-eslint-debug": "DEBUG=eslint:cli-engine pnpm lint-eslint",
+    "lint-eslint-summary": "pnpm lint-eslint -f summary",
+    "lint-eslint-print-config": "eslint --print-config temp.ts",
+    "lint-prettier": "prettier --check '**/*.{js,cjs,ts,mts,tsx,html,css,json,md}'",
+    "lint": "pnpm lint-eslint && pnpm lint-prettier && pnpm lint-eslint-config-prettier && pnpm lint-eslint-deprecated-rules",
+    "format-eslint": "eslint --fix '**/*.{js,cjs,ts,mts,tsx}'",
+    "format-prettier": "prettier --write '**/*.{js,cjs,ts,mts,tsx,html,css,json,md}'",
+    "format": "pnpm format-eslint && pnpm format-prettier",
     "type-check": "tsc --noEmit"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run base-eslint -- --fix --max-warnings 0",
-      "npm run base-prettier -- --write"
+    "*.{js,cjs,ts,mts,tsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
     ],
-    "*.{json,md}": [
-      "npm run base-prettier -- --write"
+    "*.{html,css,json,md}": [
+      "prettier --write"
     ]
   },
   "dependencies": {},
@@ -114,7 +118,7 @@
   "engines": {
     "node": ">=18.12.0"
   },
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "pnpm@9.11.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexilyaev/eslint-config-ai.git"

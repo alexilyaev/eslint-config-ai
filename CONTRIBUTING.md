@@ -1,6 +1,16 @@
 # Contributing
 
-This is mainly for myself, but might useful for others.
+This is mainly for myself, but might be useful for others.
+
+## Setup
+
+- Clone the repo
+- Install dependencies
+  - `pnpm install`
+- Link the package to itself for linting to work properly
+  - `pnpm link --global`
+  - `pnpm link --global eslint-config-ai`
+- `pnpm lint`
 
 ## Add a new config
 

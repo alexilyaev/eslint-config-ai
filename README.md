@@ -1,7 +1,6 @@
 # eslint-config-ai
 
-> An opinionated set of ESLint [shareable configs](http://eslint.org/docs/developer-guide/shareable-configs.html)
-> by Alex Ilyaev
+> Opinionated set of ESLint [shareable configs](http://eslint.org/docs/developer-guide/shareable-configs.html) by Alex Ilyaev
 
 ## Why?
 
@@ -44,7 +43,7 @@ which got out of hand pretty quickly.
 Required:
 
 ```shell
-yarn add -D \
+pnpm add -D \
   prettier \
   eslint \
   eslint-config-prettier \
@@ -57,7 +56,7 @@ yarn add -D \
 Optional (based on the configs you choose):
 
 ```shell
-yarn add -D \
+pnpm add -D \
   eslint-plugin-import \
   eslint-import-resolver-typescript \
   eslint-plugin-jest \
@@ -72,7 +71,7 @@ yarn add -D \
   eslint-plugin-unicorn
 ```
 
-- If you use npm, replace `yarn add` with `npm install`
+- If you use npm, replace `pnpm add` with `npm install`
 
 ## Usage
 

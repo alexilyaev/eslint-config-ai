@@ -1,44 +1,52 @@
-# Javascript Node CircleCI 2.0 configuration file
+# Javascript Node CircleCI 2.1 configuration file
 #
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-
-version: 2
+# Check https://circleci.com/docs/language-javascript/ for more details
+version: 2.1
 
 # YAML Anchors and Aliases
-# https://circleci.com/docs/2.0/writing-yaml/
-# https://circleci.com/blog/circleci-hacks-reuse-yaml-in-your-circleci-config-with-yaml/
+# - https://circleci.com/docs/introduction-to-yaml-configurations/
+# - https://circleci.com/blog/circleci-hacks-reuse-yaml-in-your-circleci-config-with-yaml/
 
 # Download and cache dependencies
-# https://circleci.com/docs/2.0/yarn/
-# https://circleci.com/docs/2.0/caching/
-_restore_yarn_cache: &restore_yarn_cache
+# - https://circleci.com/docs/caching/
+# - https://pnpm.io/continuous-integration#circleci
+_restore_pnpm_cache: &restore_pnpm_cache
+  name: Restore pnpm Package Cache
   keys:
-    - yarn-packages-{{ checksum "yarn.lock" }}
+    - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
 
-_save_yarn_cache: &save_yarn_cache
-  key: yarn-packages-{{ checksum "yarn.lock" }}
+_save_pnpm_cache: &save_pnpm_cache
+  name: Save pnpm Package Cache
+  key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
   paths:
-    - ~/.cache/yarn
+    - .pnpm-store
 
 _link_self_as_dependency: &link_self_as_dependency
   name: 'Link `eslint-config-ai` as a dependency'
   command: |
-    yarn link
-    yarn link eslint-config-ai
+    pnpm link --global
+    pnpm link --global eslint-config-ai
 
 _defaults: &defaults
   steps:
     - run: node -v
     - checkout
-    - restore_cache: *restore_yarn_cache
-    - run: yarn install --frozen-lockfile
-    - save_cache: *save_yarn_cache
+    - restore_cache: *restore_pnpm_cache
+    - run: pnpm -v
+    - run:
+        # Do I need this?
+        # corepack prepare pnpm@latest-9 --activate
+        name: Install pnpm package manager
+        command: |
+          corepack enable
+          pnpm config set store-dir .pnpm-store
+    - run: pnpm -v
+    - run: pnpm install --frozen-lockfile
+    - save_cache: *save_pnpm_cache
     - run: *link_self_as_dependency
-    - run: npm run lint
+    - run: pnpm lint
 
 # Setup
-
 jobs:
   node-current:
     <<: *defaults
