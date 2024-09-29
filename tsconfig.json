@@ -17,7 +17,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["node"]
+    "types": ["node"],
+    "verbatimModuleSyntax": true
   },
   "include": ["*.js", "**/*.ts"],
   "exclude": ["node_modules"]
