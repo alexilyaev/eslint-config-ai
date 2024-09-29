@@ -36,7 +36,13 @@ _defaults: &defaults
     - run:
         name: Install pnpm package manager
         command: |
-          corepack enable
+          sudo corepack enable
+    # - run:
+    #     name: Install pnpm package manager
+    #     command: |
+    #       corepack enable
+    #       corepack prepare pnpm@latest-9 --activate
+    #       pnpm config set store-dir .pnpm-store
     - run: pnpm -v
     - run: pnpm install --frozen-lockfile
     - save_cache: *save_pnpm_cache
