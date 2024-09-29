@@ -11,6 +11,9 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: 1.5.4
         version: 1.5.4(eslint@8.56.0)(typescript@5.3.3)
+      '@total-typescript/ts-reset':
+        specifier: 0.6.1
+        version: 0.6.1
       '@types/eslint':
         specifier: 8.56.2
         version: 8.56.2
@@ -448,6 +451,9 @@ packages:
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: '>=8.40.0'
+
+  '@total-typescript/ts-reset@0.6.1':
+    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
 
   '@types/babel__core@7.20.0':
     resolution: {integrity: sha512-+n8dL/9GWblDO0iU6eZAwEIJVr5DWigtle+Q6HLOrh/pdbXOhOtqzq8VPPE2zvNJzSKY4vH/z3iT3tn0A3ypiQ==}
@@ -3014,6 +3020,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@total-typescript/ts-reset@0.6.1': {}
 
   '@types/babel__core@7.20.0':
     dependencies:

@@ -60,9 +60,21 @@ module.exports = {
     'import/no-named-as-default': 1,
     'import/no-named-as-default-member': 1,
     'import/no-deprecated': 1,
+    // Make sure we only `import` packages that are defined in `package.json` `dependencies`
     'import/no-extraneous-dependencies': [
       1,
-      { packageDir: '.', devDependencies: false },
+      {
+        // Only allow these file patterns to import from `devDependencies`
+        devDependencies: [
+          './*.{js,cjs}',
+          './.*.{js,cjs}',
+          './*.config.*',
+          '**/*.{spec,test}.ts',
+          '**/test/**',
+          '**/*.d.ts',
+          'dangerfile.ts',
+        ],
+      },
     ],
     'import/no-mutable-exports': 1,
     'import/no-unused-modules': 0,
@@ -110,7 +122,10 @@ module.exports = {
     'import/newline-after-import': 1,
     'import/prefer-default-export': 0,
     'import/max-dependencies': 0,
-    'import/no-unassigned-import': 1,
+    'import/no-unassigned-import': [
+      1,
+      { allow: ['**/*.css', '@total-typescript/ts-reset'] },
+    ],
     'import/no-named-default': 1,
     'import/no-default-export': 1,
     'import/no-named-export': 0,
