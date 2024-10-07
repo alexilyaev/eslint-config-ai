@@ -1,9 +1,9 @@
 # Rules Reference
 # http://philhosoft.github.io/Software/Git-gitignore-rules/
 
-# Temp files
-tmp/**
-.tmp/**
+# Temp
+tmp
+.tmp
 
 # Logs
 logs
@@ -12,6 +12,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
 
 # TypeScript cache
 *.tsbuildinfo
@@ -25,8 +26,10 @@ lerna-debug.log*
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
-/node_modules
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
 
 # OS generated files
 .DS_STORE
@@ -43,7 +46,28 @@ Thumbs.db
 # Build stuff
 /dist
 /app/dist
+/build
 
 # Testing
 /coverage
 /.test
+
+# Database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+db.sqlite
+
+# env files
+.env
+# local env files
+# do not commit any .env files to git, except for the .env.example file
+# https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env*.local
+
+# next.js
+/.next
+/out
+next-env.d.ts
+
+# Deployment Platforms
+.vercel

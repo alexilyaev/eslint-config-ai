@@ -26,7 +26,7 @@ This is mainly for myself, but might be useful for others.
 ## Publishing a new version
 
 - Commit all changes before continuing
-- `npm version minor`
+- `npm version patch` (or `minor` or `major`)
   - This will do 3 things:
     - Update the version in `package.json`
     - Create a git tag

@@ -1,4 +1,2 @@
-node_modules
-build
-dist
-.pnpm-store
+# Prettier automatically excludes patterns from `.gitignore`
+# Here we can exclude extra patterns that are not in `.gitignore`

@@ -102,7 +102,7 @@ This config extends `eslint:recommended` and sets up Prettier
 
 ### Base + Plugins
 
-You can choose which plugin to add
+You can choose which plugins to add
 
 ```json
 {
