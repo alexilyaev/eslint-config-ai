@@ -33,7 +33,7 @@
     "@stylistic/eslint-plugin": "1.5.4",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/eslint": "8.56.2",
-    "@types/node": "22.7.4",
+    "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "6.19.1",
     "@typescript-eslint/parser": "6.19.1",
     "eslint": "8.57.0",
