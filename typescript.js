@@ -45,6 +45,12 @@ module.exports = {
             ignoreRestSiblings: true,
           },
         ],
+        // Turning off due to false positives.
+        // e.g. https://codesandbox.io/p/devbox/4xq3ql?file=%2Findex.ts%3A20%2C8
+        // - https://typescript-eslint.io/rules/no-unnecessary-condition/#when-not-to-use-it
+        // - https://github.com/microsoft/TypeScript/issues/9998
+        '@typescript-eslint/no-unnecessary-condition': 'off',
+
         // Keeping here in case it'll pop up
         // Might conflict in React patterns
         // '@typescript-eslint/no-misused-promises': [
