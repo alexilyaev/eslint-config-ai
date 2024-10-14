@@ -91,6 +91,7 @@ module.exports = {
     'import/no-duplicates': 1,
     'import/no-namespace': 1,
     'import/extensions': 0,
+    // This is a basic order that should be customized per project
     'import/order': [
       1,
       {
@@ -133,4 +134,34 @@ module.exports = {
     'import/group-exports': 0,
     'import/dynamic-import-chunkname': 0,
   },
+
+  overrides: [
+    // TypeScript files
+    {
+      files: ['**/*.{ts,tsx,mts,cts}'],
+      settings: {
+        // Support custom aliases (e.g. Next.js/Remix)
+        'import/internal-regex': '^~/',
+        // These are inspired by:
+        // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
+        // https://github.com/import-js/eslint-plugin-import?tab=readme-ov-file#importparsers
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts', '.tsx', '.mts', '.cts', '.d.ts'],
+        },
+        // https://github.com/import-js/eslint-plugin-import#resolvers
+        'import/resolver': {
+          // https://www.npmjs.com/package/eslint-import-resolver-node
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          },
+          // https://github.com/import-js/eslint-import-resolver-typescript
+          typescript: {
+            alwaysTryTypes: true,
+            // This might be needed in monorepos
+            // project: `${__dirname}/tsconfig.json`,
+          },
+        },
+      },
+    },
+  ],
 };

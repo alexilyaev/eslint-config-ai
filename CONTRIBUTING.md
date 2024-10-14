@@ -32,7 +32,7 @@ This is mainly for myself, but might be useful for others.
     - Create a git tag
     - Create a git commit
 - `npm publish`
-  - Will automatically push the commit and tag as well
+  - Will also push the commit and tag as well (see `postpublish`)
 - `git push`
   - Needed to move the remote HEAD to the latest commit
 - Update the GitHub Release Notes

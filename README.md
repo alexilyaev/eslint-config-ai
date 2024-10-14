@@ -12,6 +12,8 @@ which got out of hand pretty quickly.
 - `ai`
   - [eslint:recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
   - Common base rules
+- `ai/typescript`
+  - [@typescript-eslint/eslint-plugin](https://typescript-eslint.io/)
 - `ai/unicorn`
   - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - `ai/import`
@@ -108,6 +110,7 @@ You can choose which plugins to add
 {
   "extends": [
     "ai",
+    "ai/typescript",
     "ai/unicorn",
     "ai/import",
     "ai/jest",
@@ -120,15 +123,15 @@ You can choose which plugins to add
 }
 ```
 
-### Base + React
+### Base + TypeScript + React
 
 ```json
 {
-  "extends": ["ai", "ai/react", "ai/last"]
+  "extends": ["ai", "ai/typescript", "ai/react", "ai/last"]
 }
 ```
 
-### All (Base + Plugins + React + Last)
+### All (Base + All Plugins + Last)
 
 ```json
 {
@@ -141,6 +144,7 @@ You can choose which plugins to add
 You can see what's currently configured in these files:
 
 - [base](./base.js)
+- [typescript](./typescript.js)
 - [unicorn](./unicorn.js)
 - [import](./import.js)
 - [jest](./jest.js)

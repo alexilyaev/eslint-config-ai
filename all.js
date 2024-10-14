@@ -4,6 +4,7 @@
 module.exports = {
   extends: [
     'ai',
+    'ai/typescript',
     'ai/unicorn',
     'ai/import',
     'ai/jest',
