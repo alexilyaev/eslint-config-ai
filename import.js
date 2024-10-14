@@ -150,10 +150,6 @@ module.exports = {
         },
         // https://github.com/import-js/eslint-plugin-import#resolvers
         'import/resolver': {
-          // https://www.npmjs.com/package/eslint-import-resolver-node
-          node: {
-            extensions: ['.js', '.jsx', '.ts', '.tsx'],
-          },
           // https://github.com/import-js/eslint-import-resolver-typescript
           typescript: {
             alwaysTryTypes: true,
