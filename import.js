@@ -6,12 +6,15 @@ module.exports = {
     // https://github.com/import-js/eslint-plugin-import/tree/main/config
     'plugin:import/errors',
     'plugin:import/warnings',
+    // Must be last among the `import` configs
+    // https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
     'plugin:import/typescript',
   ],
   plugins: ['import'],
+
   /**
    * NOTE:
-   * Add this if you're using Webpack aliases...
+   * Try this if you're using Webpack aliases and having issues...
    */
   // Specific settings used by different plugins
   // settings: {
@@ -23,15 +26,8 @@ module.exports = {
   //       moduleDirectory: ['node_modules', __dirname, 'app'],
   //     },
   //   },
-  //   // Or...
-  //   'import/resolver': {
-  //     // https://github.com/import-js/eslint-import-resolver-typescript
-  //     typescript: {
-  //       alwaysTryTypes: true,
-  //       project: `${__dirname}/tsconfig.json`,
-  //     },
-  //   },
   // },
+
   rules: {
     /**
      * eslint-plugin-import
@@ -42,9 +38,6 @@ module.exports = {
 
     // Static analysis
     'import/no-unresolved': 1,
-    'import/named': 1,
-    'import/default': 1,
-    'import/namespace': 1,
     'import/no-restricted-paths': 0,
     'import/no-absolute-path': 1,
     'import/no-dynamic-require': 1,
@@ -56,9 +49,6 @@ module.exports = {
     'import/no-relative-parent-imports': 0,
 
     // Helpful warnings
-    'import/export': 1,
-    'import/no-named-as-default': 1,
-    'import/no-named-as-default-member': 1,
     'import/no-deprecated': 1,
     // Make sure we only `import` packages that are defined in `package.json` `dependencies`
     'import/no-extraneous-dependencies': [
@@ -88,7 +78,6 @@ module.exports = {
     // Style guide
     'import/first': 1,
     'import/exports-last': 0,
-    'import/no-duplicates': 1,
     'import/no-namespace': 1,
     'import/extensions': 0,
     // This is a basic order that should be customized per project
@@ -142,12 +131,6 @@ module.exports = {
       settings: {
         // Support custom aliases (e.g. Next.js/Remix)
         'import/internal-regex': '^~/',
-        // These are inspired by:
-        // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
-        // https://github.com/import-js/eslint-plugin-import?tab=readme-ov-file#importparsers
-        'import/parsers': {
-          '@typescript-eslint/parser': ['.ts', '.tsx', '.mts', '.cts', '.d.ts'],
-        },
         // https://github.com/import-js/eslint-plugin-import#resolvers
         'import/resolver': {
           // https://github.com/import-js/eslint-import-resolver-typescript
