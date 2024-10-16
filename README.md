@@ -55,21 +55,35 @@ pnpm add -D \
   eslint-config-ai
 ```
 
-Optional (based on the configs you choose):
+### Optional (based on the configs you choose)
+
+`ai/react`:
+
+```shell
+pnpm add -D \
+  eslint-plugin-compat \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks
+```
+
+`ai/import`:
 
 ```shell
 pnpm add -D \
   eslint-plugin-import \
-  eslint-import-resolver-typescript \
+  eslint-import-resolver-typescript
+```
+
+Other:
+
+```shell
+pnpm add -D \
   eslint-plugin-jest \
   eslint-plugin-lodash \
   eslint-plugin-promise \
   eslint-plugin-jsdoc \
   eslint-plugin-eslint-comments \
-  eslint-plugin-compat \
-  eslint-plugin-react \
-  eslint-plugin-react-hooks \
-  eslint-plugin-jsx-a11y \
   eslint-plugin-unicorn
 ```
 
