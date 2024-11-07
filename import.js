@@ -1,5 +1,11 @@
 // @ts-check
 
+const unassignedImportsWhitelist = [
+  '**/*.css',
+  '@total-typescript/ts-reset',
+  'server-only',
+];
+
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
@@ -81,6 +87,7 @@ module.exports = {
     'import/no-namespace': 1,
     'import/extensions': 0,
     // This is a basic order that should be customized per project
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
     'import/order': [
       1,
       {
@@ -106,16 +113,25 @@ module.exports = {
           group: 'internal',
           position: 'after',
         })),
-        'newlines-between': 'always',
+        // Allow custom sort order for the `external` group
+        // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#pathgroupsexcludedimporttypes-array
+        // pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'never',
+        named: {
+          enabled: true,
+          types: 'types-first',
+        },
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        warnOnUnassignedImports: true,
       },
     ],
     'import/newline-after-import': 1,
     'import/prefer-default-export': 0,
     'import/max-dependencies': 0,
-    'import/no-unassigned-import': [
-      1,
-      { allow: ['**/*.css', '@total-typescript/ts-reset', 'server-only'] },
-    ],
+    'import/no-unassigned-import': [1, { allow: unassignedImportsWhitelist }],
     'import/no-named-default': 1,
     'import/no-default-export': 1,
     'import/no-named-export': 0,
