@@ -50,17 +50,6 @@ module.exports = {
         // - https://typescript-eslint.io/rules/no-unnecessary-condition/#when-not-to-use-it
         // - https://github.com/microsoft/TypeScript/issues/9998
         '@typescript-eslint/no-unnecessary-condition': 'off',
-
-        // Keeping here in case it'll pop up
-        // Might conflict in React patterns
-        // '@typescript-eslint/no-misused-promises': [
-        //   'warn',
-        //   {
-        //     checksVoidReturn: {
-        //       attributes: false,
-        //     },
-        //   },
-        // ],
       },
     },
 
@@ -71,6 +60,16 @@ module.exports = {
         // False positive when using `onClick={() => someFunc()}`
         // Will result in an unnecessary function body, which bloats the code
         '@typescript-eslint/no-confusing-void-expression': 'off',
+        // False positive when using `onClick={() => someAsyncFunc()}`
+        '@typescript-eslint/no-misused-promises': [
+          'warn',
+          {
+            checksVoidReturn: {
+              // https://typescript-eslint.io/rules/no-misused-promises/#attributes
+              attributes: false,
+            },
+          },
+        ],
       },
     },
   ],
