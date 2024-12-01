@@ -65,7 +65,7 @@ module.exports = {
           './*.{js,cjs}',
           './.*.{js,cjs}',
           './*.config.*',
-          '**/*.{spec,test}.ts',
+          '**/*.{spec,test,bench,benchmark}.ts',
           '**/test/**',
           '**/*.d.ts',
           'dangerfile.ts',
