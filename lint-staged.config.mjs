@@ -1,1 +1,1 @@
-export { default } from '@alexilyaev/configs/lint-staged/base.js';
+export { default } from '@alexilyaev/configs/lint-staged/base';

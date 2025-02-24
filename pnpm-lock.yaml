@@ -12,8 +12,8 @@ importers:
         specifier: 0.1.3
         version: 0.1.3
       '@alexilyaev/configs':
-        specifier: 0.4.2
-        version: 0.4.2
+        specifier: 0.5.3
+        version: 0.5.3
       '@stylistic/eslint-plugin':
         specifier: 2.9.0
         version: 2.9.0(eslint@8.57.0)(typescript@5.6.3)
@@ -109,8 +109,8 @@ packages:
     resolution: {integrity: sha512-JmGF/jX7853DlnLkHiol9+Syb+WNezR+jG4nNAx/klbszezXJnGETuBCm9oX9SuifRN+bHtQFqxaOgBFKIb1cQ==}
     engines: {node: '>=18.12.0'}
 
-  '@alexilyaev/configs@0.4.2':
-    resolution: {integrity: sha512-RKeS/gavSjIR1G5Fz3+EAuE0QLnDsQBJ1yTEq3inDQeh9GXcLlPtPaw8HhVeFcRcC78W5OoS90AY7AwIZ54jzQ==}
+  '@alexilyaev/configs@0.5.3':
+    resolution: {integrity: sha512-xpv9SnvsgYz8oxVsBBiB2z8nEzpckP+6IrS5xREBaCK41emuOVkHUyCQKnnByh6t8/8mz74VSAOATl3H7798Ow==}
     engines: {node: '>=18.12.0'}
 
   '@ampproject/remapping@2.2.0':
@@ -2721,7 +2721,7 @@ snapshots:
 
   '@alexilyaev/browserslist-config@0.1.3': {}
 
-  '@alexilyaev/configs@0.4.2': {}
+  '@alexilyaev/configs@0.5.3': {}
 
   '@ampproject/remapping@2.2.0':
     dependencies:
