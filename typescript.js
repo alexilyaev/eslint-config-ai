@@ -50,6 +50,11 @@ module.exports = {
         // - https://typescript-eslint.io/rules/no-unnecessary-condition/#when-not-to-use-it
         // - https://github.com/microsoft/TypeScript/issues/9998
         '@typescript-eslint/no-unnecessary-condition': 'off',
+        // It's ok to use numbers in template expressions
+        '@typescript-eslint/restrict-template-expressions': [
+          1,
+          { allowNumber: true },
+        ],
       },
     },
 
