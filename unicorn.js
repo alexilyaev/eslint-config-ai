@@ -14,18 +14,19 @@ module.exports = {
      * @see
      * https://github.com/sindresorhus/eslint-plugin-unicorn
      */
-    'unicorn/explicit-length-check': 0,
-    'unicorn/prevent-abbreviations': 0,
-    'unicorn/consistent-function-scoping': 0,
+    'unicorn/explicit-length-check': 'off',
+    'unicorn/prevent-abbreviations': 'off',
+    'unicorn/consistent-function-scoping': 'off',
     // Each project should define it's own filename casing for different folders
-    'unicorn/filename-case': 0,
+    'unicorn/filename-case': 'off',
     // Turn back on as it is turned off in `unicorn/recommended`
-    'no-nested-ternary': 1,
+    'no-nested-ternary': 'warn',
     // This rule allow single line nested ternary, which we don't like
-    'unicorn/no-nested-ternary': 0,
+    'unicorn/no-nested-ternary': 'off',
     // Too many false positives
-    'unicorn/no-array-method-this-argument': 0,
+    'unicorn/no-array-method-this-argument': 'off',
     // Doesn't play nice with TypeScript in certain cases
     'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-switch': 'off',
   },
 };
