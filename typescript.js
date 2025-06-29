@@ -52,7 +52,7 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-condition': 'off',
         // It's ok to use numbers in template expressions
         '@typescript-eslint/restrict-template-expressions': [
-          1,
+          'warn',
           { allowNumber: true },
         ],
       },

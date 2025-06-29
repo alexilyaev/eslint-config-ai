@@ -43,22 +43,22 @@ module.exports = {
      */
 
     // Static analysis
-    'import/no-unresolved': 1,
-    'import/no-restricted-paths': 0,
-    'import/no-absolute-path': 1,
-    'import/no-dynamic-require': 1,
-    'import/no-internal-modules': 0,
-    'import/no-webpack-loader-syntax': 1,
-    'import/no-self-import': 1,
-    'import/no-cycle': 1,
-    'import/no-useless-path-segments': 1,
-    'import/no-relative-parent-imports': 0,
+    'import/no-unresolved': 'warn',
+    'import/no-restricted-paths': 'off',
+    'import/no-absolute-path': 'warn',
+    'import/no-dynamic-require': 'warn',
+    'import/no-internal-modules': 'off',
+    'import/no-webpack-loader-syntax': 'warn',
+    'import/no-self-import': 'warn',
+    'import/no-cycle': 'warn',
+    'import/no-useless-path-segments': 'warn',
+    'import/no-relative-parent-imports': 'off',
 
     // Helpful warnings
-    'import/no-deprecated': 1,
+    'import/no-deprecated': 'warn',
     // Make sure we only `import` packages that are defined in `package.json` `dependencies`
     'import/no-extraneous-dependencies': [
-      1,
+      'warn',
       {
         // Only allow these file patterns to import from `devDependencies`
         devDependencies: [
@@ -72,24 +72,24 @@ module.exports = {
         ],
       },
     ],
-    'import/no-mutable-exports': 1,
-    'import/no-unused-modules': 0,
+    'import/no-mutable-exports': 'warn',
+    'import/no-unused-modules': 'off',
 
     // Module systems
-    'import/unambiguous': 0,
-    'import/no-commonjs': 0,
-    'import/no-amd': 1,
-    'import/no-nodejs-modules': 0,
+    'import/unambiguous': 'off',
+    'import/no-commonjs': 'off',
+    'import/no-amd': 'warn',
+    'import/no-nodejs-modules': 'off',
 
     // Style guide
-    'import/first': 1,
-    'import/exports-last': 0,
-    'import/no-namespace': 1,
-    'import/extensions': 0,
+    'import/first': 'warn',
+    'import/exports-last': 'off',
+    'import/no-namespace': 'warn',
+    'import/extensions': 'off',
     // This is a basic order that should be customized per project
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
     'import/order': [
-      1,
+      'warn',
       {
         groups: [
           'builtin',
@@ -128,16 +128,19 @@ module.exports = {
         warnOnUnassignedImports: true,
       },
     ],
-    'import/newline-after-import': 1,
-    'import/prefer-default-export': 0,
-    'import/max-dependencies': 0,
-    'import/no-unassigned-import': [1, { allow: unassignedImportsWhitelist }],
-    'import/no-named-default': 1,
-    'import/no-default-export': 1,
-    'import/no-named-export': 0,
-    'import/no-anonymous-default-export': 1,
-    'import/group-exports': 0,
-    'import/dynamic-import-chunkname': 0,
+    'import/newline-after-import': 'warn',
+    'import/prefer-default-export': 'off',
+    'import/max-dependencies': 'off',
+    'import/no-unassigned-import': [
+      'warn',
+      { allow: unassignedImportsWhitelist },
+    ],
+    'import/no-named-default': 'warn',
+    'import/no-default-export': 'warn',
+    'import/no-named-export': 'off',
+    'import/no-anonymous-default-export': 'warn',
+    'import/group-exports': 'off',
+    'import/dynamic-import-chunkname': 'off',
   },
 
   overrides: [

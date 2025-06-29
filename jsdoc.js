@@ -20,14 +20,14 @@ module.exports = {
      * @see
      * https://github.com/gajus/eslint-plugin-jsdoc
      */
-    'jsdoc/tag-lines': [1, 'any', { startLines: 1, endLines: 0 }],
+    'jsdoc/tag-lines': ['warn', 'any', { startLines: 1, endLines: 0 }],
     'jsdoc/require-jsdoc': [
-      1,
+      'warn',
       { publicOnly: true, exemptEmptyFunctions: true },
     ],
     // Add rules that are not present or `off` in `jsdoc/recommended`
     'jsdoc/check-line-alignment': [
-      1,
+      'warn',
       'always',
       {
         preserveMainDescriptionPostDelimiter: true,
@@ -43,8 +43,8 @@ module.exports = {
         ],
       },
     ],
-    'jsdoc/check-syntax': 1,
-    'jsdoc/no-bad-blocks': 1,
+    'jsdoc/check-syntax': 'warn',
+    'jsdoc/no-bad-blocks': 'warn',
   },
   overrides: [
     {

@@ -14,11 +14,11 @@ module.exports = {
      * @see
      * https://github.com/wix/eslint-plugin-lodash
      */
-    'lodash/chaining': 0,
-    'lodash/prefer-constant': [1, false, true],
-    'lodash/import-scope': [1, 'full'],
+    'lodash/chaining': 'off',
+    'lodash/prefer-constant': ['warn', false, true],
+    'lodash/import-scope': ['warn', 'full'],
     'lodash/prefer-lodash-method': [
-      1,
+      'warn',
       {
         ignoreMethods: [
           'reverse',
